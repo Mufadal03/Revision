@@ -45,7 +45,7 @@ a{
 }
 
 #landing_left{
-    background-image: url("./main.jpg");
+    background-image: url("./img/main.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -335,7 +335,7 @@ textarea{
 #map>div{
     width: 80%;
     margin: auto;
-   background-image: url("./map.png");
+   background-image: url("./img/map.png");
    background-size: cover;
    background-position: center;
    height: 100%;
