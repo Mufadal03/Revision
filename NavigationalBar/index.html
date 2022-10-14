@@ -44,6 +44,12 @@
 <script>
     const toggler = document.querySelector("#toggler")
     let menu = document.querySelector("#left")
+    let width = window.innerWidth
+    window.addEventListener("resize", function (event) {
+           width=window.innerWidth
+            if (Number(width) > 768) menu.style.display = "block"
+        })
+       
     toggler.addEventListener("click",()=>{
         if (toggler.checked) {
             menu.style.display = "block"
