@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/8173112d8a.js" crossorigin="anonymous"></script>
+
     <title>Masai - Navigational Bar</title>
 </head>
 <body>
     <div id="navbarContainer">
         <div id="navbar">
+            <input type="checkbox"id="toggler">
+            <label for="toggler"><i class="fa-solid fa-bars"></i></label>
             <div id="nav_left">
             </div>
             <div id="nav_mid">
@@ -37,3 +41,16 @@
     </div>
 </body>
 </html>
+<script>
+    const toggler = document.querySelector("#toggler")
+    let menu = document.querySelector("#left")
+    toggler.addEventListener("click",()=>{
+        if (toggler.checked) {
+            menu.style.display = "block"
+        }
+        else {
+            menu.style.display = "none"
+        }
+    })
+    
+</script>
