@@ -1,4 +1,4 @@
-<h1 align="center">Revision Assignments</h1> 
+<h1 align="center">Revision</h1> 
 <br />
 <p align="center">
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3"/>   
