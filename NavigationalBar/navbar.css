@@ -12,11 +12,15 @@
     height: 50px;
     margin: auto;
     display: flex;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
 }
 #navbar>#nav_left{
     background-image: url("https://www.masaischool.com/img/navbar/logo.svg");
     height: 100%;
     width: 10%;
+    margin-left: 12px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -29,16 +33,17 @@
     height: 100%;
     display: flex;
     width: 92%;
+    justify-content: space-between;
 }
 #mid_container>#left{
     padding: 0px 20px;
-    width: 75%;
 }
 #mid_container>#left>.list{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 500;
+    gap: 2rem;
     height: 100%;
 }
 #mid_container>#left>.list>li{
@@ -46,12 +51,9 @@
     cursor: pointer;
 }
 
-#navbar>#nav_right{
-    width: 10%;
-}
 #nav_right>.btn{
-    width: 100%;
-    height: 100%;
+    padding: 10px 20px;
+    width: fit-content;
     border: none;
     background-color: transparent;
     color: red;
@@ -64,7 +66,8 @@
     background-color: #f7e4e8;
 }
 .btn {
-    width: 100%;
+    padding: 12px 20px;
+    width: fit-content;
     height: 100%;
     border: none;
     background-color: transparent;
@@ -73,8 +76,121 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    padding: 0px 15px
 }
 .btn:hover{
     background-color: #c5ecf3;
+}
+
+#toggler{
+    position: relative;
+    display: none;
+    /* visibility: hidden; */
+}
+label{
+    position: absolute;
+    display: none;
+}
+@media only screen and (min-width:425px) and (max-width: 769px) {
+   #navbar{
+    width: 95%;
+   }
+  #navbar>#nav_mid{
+    width: 40%;
+   }
+   #mid_container{
+    display: flex;
+    flex-direction: row-reverse;
+   }
+   #left{
+    display: none;
+    position: absolute;
+    top: 105%;
+    width:94%;
+    right: 0px;   
+    border: 1px solid rgba(0, 0, 0, .5);
+   }
+    #mid_container>#left>.list{
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+   }
+   #mid_container>#left>.list>li{
+    display: block;
+    border-bottom: 1px solid;
+   }
+   #navbar>#nav_left{
+    flex-grow: 1;
+    width: 20%;
+    margin-left: 20px;
+    background-position: left;
+   }
+   #nav_right>.btn{
+    font-size: 13px;
+   }
+   .btn{
+    font-size: 11px;
+    /* padding: 5px 10px; */
+   }
+  .fa-solid {
+      font-size: 20px;
+  }
+  label{
+    display: block;
+  }
+}
+@media only screen and (min-width:100px) and (max-width: 425px){
+    #navbar {
+            width: 95%;
+        }
+    
+        #navbar>#nav_mid {
+            width: 40%;
+        }
+    
+        #mid_container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+                #navbar>#nav_left {
+                    flex-grow: 1;
+                    width: 20%;
+                    margin-left: 20px;
+                    background-position: left;
+                }
+    
+           #left {
+               /* display: none; */
+               position: absolute;
+               top: 105%;
+               width: 94%;
+               right: 0px;
+               border: 1px solid rgba(0, 0, 0, .5);
+           }
+    
+           #mid_container>#left>.list {
+               flex-direction: column;
+               margin-top: 10px;
+               width: 100%;
+           }
+    
+           #mid_container>#left>.list>li {
+               display: block;
+               border-bottom: 1px solid;
+           }
+    
+        #nav_right>.btn {
+            font-size: 10px;
+        }
+    
+        .btn {
+            font-size:10px;
+        }
+        .fa-solid {
+            font-size: 20px;
+            display: block;
+        }
+        label{
+            display: block;
+        }
+
 }
