@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(auto);
+    gap: 10px;
+}
+#container>div{
+    display: flex;
+    flex-direction: column;
+}
+#pagination{
+    margin-top: 5rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+}
+.btn{
+    padding: 5px 15px;
+    border: none;
+    background-color: lightblue;
+    color: black;
+    border-radius: 5px;
+    cursor:pointer
+}
+.active{
+    background-color: blue;
+    color: white;
+    cursor: not-allowed;
+}
